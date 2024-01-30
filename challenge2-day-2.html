@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            #gambar {
+                float: left;
+            }
+            #checkout {
+                background-color: blue;
+                float:right;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                padding-right: 80px;
+                padding-left: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #judulForm {
+                text-align: center;
+                font-family: arial;
+            }
+            #container{
+                height: 100%; /* Set tinggi body dan html ke 100% agar bisa menggunakan flexbox */
+                margin: 0; 
+                display: flex; 
+                justify-content: center;
+            }
+            #gambar {
+                margin-right: 20px;
+            }
+            input {
+                background-color: blue;
+                padding: 8px;
+                margin: 5px 0; 
+                border-radius: 5px; 
+                border: 1px solid white;
+            }
+            #cardName, #cardNumber, #cardHolder{
+                width: 350px;
+            }
+            button {
+            background-color: white; 
+            color: black; 
+            padding: 10px 20px; /* Memberi padding agar tombol lebih lebar */
+            border: 1px solid #ccc; /* Memberi border agar tombol terlihat */
+            border-radius: 5px; 
+            cursor: pointer; 
+            }
+        </style>
+    </head>
+    <body style="background-color: black;">
+        <div id="container">
+            <div>
+                <img src="jamtangan2.png" id="gambar" width="500" height="500">
+            </div>
+            <div id="checkout">
+                <form>
+                    <h1 id="judulForm" style="color:white">CHECKOUT</h1>
+                    <div id="tabelCheckout">
+                        <div>
+                            <input type="text" id="cardName" name="cardName" placeholder="Card Name"><br>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number"><br>
+                            <input type="text" id="cardHolder" name="cardHolder" placeholder="Cardholder Name"><br>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="Expiry Date">
+                            <input type="text" id="numCVV" name="numCVV" placeholder="CVV">
+                        </div>
+                        <div>
+                            <button>Complete Order</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
