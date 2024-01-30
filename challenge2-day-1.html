@@ -45,10 +45,10 @@
                     <img src="logo.png" alt="fotodev">
                 </div>
                 <div class="card-info-identitas ms-3">
-                    <h2>Rimdani Alya Annisa</h2>
-                    <p>Front End Designer</p>
-                    <button type="button" class="btn btn-primary">Kontak</button>
-                    <button type="button" class="btn btn-outline-success">Resume</button>
+                    <h2 id="dataNama">Rimdani Alya Annisa</h2>
+                    <p id="dataRole">Front End Designer</p>
+                    <input type="button" onclick=showForm() class="col-4 btn btn-primary" value="Edit">
+                    <input type="button" class="col-4 btn btn-outline-success" value="Resume">
                 </div>
                 <div class="d-flex flex-row ms-5">
                     <div class="d-flex flex-column">
@@ -59,16 +59,16 @@
                         <b>e-mail</b>
                     </div>
                     <div class="d-flex flex-column ms-3">
-                        Rimdani Alya Annisa<br/>
-                        23<br/>
-                        Jakarta, Indonesia<br/>
-                        2<br/>
-                        alya@gmail.com
+                        <div id="dataAvailability">Full Time</div>
+                        <div id="dataUmur">23</div>
+                        <div id="dataLokasi">Jakarta, Indonesia</div>
+                        <div id="dataPengalaman">2</div>
+                        <div id="dataEmail">alya@gmail.com</div>
                     </div>
                 </div>
             </div>
           </div>
-          <div class="card-form container" style="background-color: #ffffff; margin-top: 20px;">
+          <div class="card-form container" id="dataFormulir" style="background-color: #ffffff; margin-top: 20px;">
             <form>
                 <div class="mb-2">
                   <label for="inputNama1" class="form-label">Nama</label>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="mb-2">
                   <label for="inputRole1" class="form-label">Role</label>
-                  <input type="password" class="form-control" id="inputRole1">
+                  <input type="text" class="form-control" id="inputRole1">
                 </div>
                 <div class="mb-2">
                     <label for="inputAvailability1" class="form-label">Availability</label>
@@ -100,7 +100,8 @@
                 </div>
                 <div class="mb-2">
                     <div class="mb-2">
-                        <button type="submit" class="btn btn-success col-12">Submit</button>
+                        <!-- <button type="submit" onclick=updateFormData() class="btn btn-success col-12">Submit</button> -->
+                        <input type="button" onclick=updateFormData() class="btn btn-success col-12" value="Submit">
                     </div>
                 </div>
               </form>
@@ -109,7 +110,32 @@
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+        <script>
+          function showForm(){
+            let formElement = document.getElementById("dataFormulir");
+          
+          document.getElementById('inputNama1').setAttribute("value", document.getElementById('dataNama').innerHTML)
+          document.getElementById('inputRole1').setAttribute("value", document.getElementById('dataRole').innerHTML)
+          document.getElementById('inputAvailability1').setAttribute("value", document.getElementById('dataAvailability').innerHTML)
+          document.getElementById('inputLokasi1').setAttribute("value", document.getElementById('dataLokasi').innerHTML)
+          document.getElementById('inputPengalaman1').setAttribute("value", document.getElementById('dataPengalaman').innerHTML)
+          document.getElementById('inputEmail1').setAttribute("value", document.getElementById('dataEmail').innerHTML)
+          formElement.style.visibility = "visible";
+          }
+          function hideForm(){
+            let formElement = document.getElementById("dataFormulir");
+            formElement.style.visibility = "hidden";
+          }
+          function updateFormData(){
+            document.getElementById('dataNama').innerHTML = document.getElementById('inputNama1').value;
+            document.getElementById('dataRole').innerHTML = document.getElementById('inputRole1').value;
+            document.getElementById('dataAvailability').innerHTML = document.getElementById('inputAvailability1').value;
+            document.getElementById('dataLokasi').innerHTML = document.getElementById('inputLokasi1').value;
+            document.getElementById('dataPengalaman').innerHTML = document.getElementById('inputPengalaman1').value;
+            document.getElementById('dataEmail').innerHTML = document.getElementById('inputEmail1').value;
+            hideForm()
+          }
+        </script>
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!--
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
