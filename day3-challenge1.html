@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <input type="text" id="pass" placeholder="Password">
+        <input type="button" onclick=checkPass() value="submit">
+        <input type="text" id="score1" placeholder="Score">
+        <input type="button" onclick=checkScore() value="check">
+        <script>
+            function checkPass(){
+            var pass = document.getElementById("pass").value;
+                if (pass == 'aya'){
+                    alert("Password benar");
+                }
+                else{
+                    alert("Password salah");
+                    window.location="https://www.google.com"
+                }
+            }
+
+            function checkScore(){
+            var score = document.getElementById("score1").value;
+                if (score >= 80 && score <= 100){
+                    alert("Your grade is A");
+                }
+                else if (score >= 60 && score < 80){
+                    alert("Your grade is B");
+                }
+                else if (score >= 40 && score < 60){
+                    alert("Your grade is C");
+                }
+                else if (score >= 0 && score < 40){
+                    alert("Your grade is D");
+                }
+                else{
+                    alert("Cannot calculate your grade");
+                }
+            }
+        </script>
+    </body>
+</html>
