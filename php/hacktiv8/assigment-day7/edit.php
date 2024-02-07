@@ -71,7 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="mb-2">
                         <div class="mb-2" style="display: flex; justify-content: center;">
-                            <!-- <button type="submit" onclick=updateFormData() class="btn btn-success col-12">Submit</button> -->
                             <button type="submit" name="simpan" class="btn btn-success" value="Simpan">Simpan</button>
                         </div>
                         <div class="mb-2" style="display: flex; justify-content: center;">
