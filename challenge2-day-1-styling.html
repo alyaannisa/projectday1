@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Goals Akhir</title>
+        <style>
+            body{
+                background-color: #f6f7fc;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRODUCT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">GALLERY</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">MY INVENTORY</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="card-identitas container" style="background-color: #ffffff;">
+            <div class="card-identitas_singkat d-flex">
+                <div>
+                    <img src="logo.png" alt="fotodev">
+                </div>
+                <div class="card-info-identitas ms-3">
+                    <h2 id="dataNama">Rimdani Alya Annisa</h2>
+                    <p id="dataRole">Front End Designer</p>
+                    <input type="button" class="col-4 btn btn-primary" value="Kontak">
+                    <input type="button" class="col-4 btn btn-outline-success" value="Resume">
+                </div>
+                <div class="d-flex flex-row ms-5">
+                    <div class="d-flex flex-column">
+                        <b>Availability</b>
+                        <b>Usia</b>
+                        <b>Lokasi</b>
+                        <b>Pengalaman</b>
+                        <b>e-mail</b>
+                    </div>
+                    <div class="d-flex flex-column ms-3">
+                        <div id="dataAvailability">Full Time</div>
+                        <div id="dataUmur">23</div>
+                        <div id="dataLokasi">Jakarta, Indonesia</div>
+                        <div id="dataPengalaman">2</div>
+                        <div id="dataEmail">alya@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="card-form container" id="dataFormulir" style="background-color: #ffffff; margin-top: 20px;">
+            <form>
+                <div class="mb-2">
+                  <label for="inputNama1" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="inputNama1">
+                </div>
+                <div class="mb-2">
+                  <label for="inputRole1" class="form-label">Role</label>
+                  <input type="text" class="form-control" id="inputRole1">
+                </div>
+                <div class="mb-2">
+                    <label for="inputAvailability1" class="form-label">Availability</label>
+                    <input type="text" class="form-control" id="inputAvailability1">
+                </div>
+                <div class="mb-2">
+                    <label for="inputAge1" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="inputAge1">
+                </div>
+                <div class="mb-2">
+                    <label for="inputLokasi1" class="form-label">Lokasi</label>
+                    <input type="text" class="form-control" id="inputLokasi1">
+                </div>
+                <div class="mb-2">
+                    <label for="inputPengalaman1" class="form-label">Years Experience</label>
+                    <input type="text" class="form-control" id="inputPengalaman1">
+                </div>
+                <div class="mb-4">
+                    <label for="inputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail1">
+                </div>
+                <div class="mb-2">
+                    <div class="mb-2">
+                        <!-- <button type="submit" onclick=updateFormData() class="btn btn-success col-12">Submit</button> -->
+                        <input type="button" onclick=updateFormData() class="btn btn-success col-12" value="Submit">
+                    </div>
+                </div>
+              </form>
+          </div>
+
+    </body>
+</html>
