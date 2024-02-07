@@ -76,13 +76,6 @@ class database{
         //     return false;
         // }
     }
-        // $stmt = $this->conn->prepare($sql);
-        // $stmt->bindParam(':nama', $nama);
-        // $stmt->bindParam(':email', $email);
-        // $stmt->bindParam(':notelp', $notelp);
-        // $stmt->execute();
-        // return $stmt->rowCount();
-
     function closeConnection(){
         mysqli_close($this->conn);
     }
