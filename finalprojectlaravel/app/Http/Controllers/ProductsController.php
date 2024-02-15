@@ -61,7 +61,7 @@ class ProductsController extends Controller
         $request->validate([
             'name' => 'required',
             'status' => 'required',
-            'category_id' => 'required|exists:category,id',
+            'category_id' => 'required|exists:categories,category_id',
             'price' => 'nullable|integer',
             'weight' => 'nullable|integer',
             'img_url' => 'nullable|url',

@@ -47,11 +47,11 @@
                             Produk
                         </a>
                         <div class="sb-sidenav-menu-heading">Manajemen Produk</div>
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" href="{{ route('categories.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Kategori
                         </a>
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" href="{{ route('products.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Produk
                         </a>
