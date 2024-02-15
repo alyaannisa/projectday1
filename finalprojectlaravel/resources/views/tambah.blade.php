@@ -32,8 +32,8 @@
                         <div class="form-group">
                             <label for="category_id">Kategori</label>
                             <select name="category_id" id="category_id" class="form-control" required>
-                                @foreach($CategoriesList as $category)
-                                <option value="{{ $category->category_id }}">{{ $category->name }}</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->category_id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
