@@ -15,7 +15,9 @@ class CategoriesController extends Controller
 
     public function create()
     {
-    return view('categories.create');
+    // return view('categories.create');
+        $categories = Categories::all();
+        return view('categories.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -27,7 +29,7 @@ class CategoriesController extends Controller
 
     $category = new Categories();
     $category->name = $request->name;
-    $category->parent_id = $request->parent_id;
+    $category->parent_id = fake()->numberBetween(1,3);
     $category->save();
 
     return redirect()->route('categories.index')->with('success', 'Kategori berhasil ditambahkan');
@@ -36,7 +38,7 @@ class CategoriesController extends Controller
     public function show(string $id)
     {
         $CategoriesList = Categories::find($id);
-        dd($CategoriesList);
+        // dd($id);
         return view('editCategories')->with("categories", $CategoriesList);
     }
 

@@ -115,10 +115,7 @@
 
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Start Bootstrap
-                </div>
+                
             </nav>
         </div>
         <div id="layoutSidenav_content">
@@ -131,7 +128,7 @@
                     <div style="display: flex;">
                         <div class="card mb-4" style="flex: 1; margin-right: 10px;">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('products.store') }}">
+                                <form action="{{ route('categories.store') }}" method="POST">
                                     @csrf
                                     <div>
                                         <h1>kategori baru</h1>
@@ -146,10 +143,11 @@
                                     <label for="cars">Choose a car:</label>
                                     <select name="cars" id="cars">
                                 </div> --}}
-                                </form>
                                 <div style="justify-content: center; align-items: center; padding-left: 15px; padding-top: 15px;">
-                                    <a href="{{ route('categories.create') }}" class="btn btn-primary">Input Data</a>
+                                    <input type="submit" class="btn btn-primary" value="Input Data">
                                 </div>
+                                </form>
+                                
                             </div>
                         </div>
                         <div class="card mb-4" style="flex: 1; margin-left: 10px;">

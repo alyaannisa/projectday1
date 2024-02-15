@@ -11,7 +11,7 @@
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Manajemen Produk</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="{{ route('categories.index')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Kategori
                             </a>
@@ -69,10 +69,7 @@
                             
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
+                    
                 </nav>
             </div>
             <div id="layoutSidenav_content">

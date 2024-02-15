@@ -51,8 +51,8 @@ class ProductsController extends Controller
 
     public function create()
     {
-        $categories = Categories::all();
-        return view('tambah', compact('categories'));
+        $product = Products::all();
+        return view('tambah', compact('product'));
     }
 
     public function store(Request $request)
@@ -61,7 +61,7 @@ class ProductsController extends Controller
         $request->validate([
             'name' => 'required',
             'status' => 'required',
-            'categories_id' => 'required|exists:categories,id',
+            'category_id' => 'required|exists:category,id',
             'price' => 'nullable|integer',
             'weight' => 'nullable|integer',
             'img_url' => 'nullable|url',
@@ -77,7 +77,7 @@ class ProductsController extends Controller
         $product->img_url = $request->img_url;
         $product->save();
     
-        return view('products')->with('success', 'Produk berhasil ditambahkan');
+        return redirect()->route('products.index')->with('success', 'Produk berhasil ditambahkan');
     }
     /**
      * Display the specified resource.

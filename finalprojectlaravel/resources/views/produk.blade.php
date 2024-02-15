@@ -115,10 +115,7 @@
 
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Start Bootstrap
-                </div>
+               
             </nav>
         </div>
         <div id="layoutSidenav_content">
@@ -136,6 +133,7 @@
                             </div> --}}
                         <div style="justify-content: center; align-items: center; padding-left: 15px; padding-top: 15px;">
                             <a href="{{ route('products.create') }}" class="btn btn-primary">Input Data</a>
+                            
                         </div>
                         <div class="card-body">
                             <table class="table table-bordered" id="datatablesSimple">

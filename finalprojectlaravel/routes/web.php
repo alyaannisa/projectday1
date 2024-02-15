@@ -61,3 +61,5 @@ Route::get("categories", [CategoriesController::class, 'index'])->name('categori
 Route::get("categories/{id}", [CategoriesController::class, 'show'])->name('categories.show');
 Route::delete("categories/{id}", [CategoriesController::class, 'destroy'])->name('categories.destroy');
 Route::get('/categories/create', [CategoriesController::class, 'create'])->name('categories.create');
+Route::post('categories', [CategoriesController::class, 'store'])->name('categories.store');
+
