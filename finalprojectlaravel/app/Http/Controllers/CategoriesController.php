@@ -36,8 +36,10 @@ class CategoriesController extends Controller
     public function show(string $id)
     {
         $CategoriesList = Categories::find($id);
-        return view('edit')->with("categories", $CategoriesList);
+        dd($CategoriesList);
+        return view('editCategories')->with("categories", $CategoriesList);
     }
+
     public function destroy(string $id)
     {
         $findCategories = Categories::find($id);
