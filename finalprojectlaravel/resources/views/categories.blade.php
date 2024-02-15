@@ -152,7 +152,7 @@
                         </div>
                         <div class="card mb-4" style="flex: 1; margin-left: 10px;">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('products.store') }}">
+                                <form method="POST" action="{{ route('categories.store') }}">
                                     @csrf
                                     <div>
                                         <h1>list kategori</h1>
