@@ -10,5 +10,7 @@ class Categories extends Model
     use HasFactory;
     public $timestamps = false;
     protected $primaryKey = 'category_id';
-
+    protected $fillable = [
+        'category_id', 'name', 'parent_id', '_token'
+    ];
 }
